@@ -6,7 +6,7 @@ function calcular(tipo) {
         de = document.getElementById('tempo-de').value;
         para = document.getElementById('tempo-para').value;
         resultado = converterTempo(valor, de, para);
-        document.getElementById('resultado-tempo').textContent = resultado;
+        document.getElementById('resultado-tempo').value = resultado;
 
     } 
     else if (tipo === 'velocidade') {
@@ -14,7 +14,7 @@ function calcular(tipo) {
         de = document.getElementById('velocidade-de').value;
         para = document.getElementById('velocidade-para').value;
         resultado = converterVelocidade(valor, de, para);
-        document.getElementById('resultado-velocidade').textContent = resultado;
+        document.getElementById('resultado-velocidade').value = resultado;
 
     } 
     else if (tipo === 'temperatura') {
@@ -22,7 +22,7 @@ function calcular(tipo) {
         de = document.getElementById('temperatura-de').value;
         para = document.getElementById('temperatura-para').value;
         resultado = converterTemperatura(valor, de, para);
-        document.getElementById('resultado-temperatura').textContent = resultado;
+        document.getElementById('resultado-temperatura').value = resultado;
 
     } 
     else if (tipo === 'comprimento') {
@@ -30,7 +30,7 @@ function calcular(tipo) {
         de = document.getElementById('comprimento-de').value;
         para = document.getElementById('comprimento-para').value;
         resultado = converterComprimento(valor, de, para);
-        document.getElementById('resultado-comprimento').textContent = resultado;
+        document.getElementById('resultado-comprimento').value = resultado;
 
     } 
     else if (tipo === 'massa') {
@@ -38,7 +38,7 @@ function calcular(tipo) {
         de = document.getElementById('massa-de').value;
         para = document.getElementById('massa-para').value;
         resultado = converterMassa(valor, de, para);
-        document.getElementById('resultado-massa').textContent = resultado;
+        document.getElementById('resultado-massa').value = resultado;
     }
 }
 

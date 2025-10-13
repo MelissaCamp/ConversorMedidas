@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Unidades</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -14,59 +14,147 @@
 
         <div class="converter">
             <h2>Tempo</h2>
-            <div class="groupo"><label for="tempo">Converter de:</label><select id="tempo"><option value="segundos">Segundos</option><option value="minutos">Minutos</option><option value="horas">Horas</option></select></div><br>
-            <div class="groupo"><label for="tempo">Converter para:</label><select id="tempo"><option value="minutos">Minutos</option><option value="segundos">Segundos</option><option value="horas">Horas</option></select></div><br>
-            <br>
-            <div class="groupo"><label for="tempo">Digite o valor: </label><input type="numero" id="input-tempo" placeholder="Digite aqui"></div>
-            <br>
+            <div class="form-group">
+                <label for="tempo-de">Converter de:</label>
+                <select id="tempo-de">
+                    <option value="segundos">Segundos</option>
+                    <option value="minutos">Minutos</option>
+                    <option value="horas">Horas</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tempo-para">Converter para:</label>
+                <select id="tempo-para">
+                    <option value="minutos">Minutos</option>
+                    <option value="segundos">Segundos</option>
+                    <option value="horas">Horas</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input-tempo">Digite o valor:</label>
+                <input type="number" id="input-tempo" placeholder="Digite aqui">
+            </div>
+
             <button onclick="calcular('tempo')">Converter</button>
-            <div class="resultado" id="resultado-tempo"></div>
+            <div class="result-area" id="resultado-tempo"></div>
         </div>
 
         <div class="converter">
             <h2>Velocidade</h2>
-            <div class="groupo"><label for="velocidade">Converter de:</label><select id="velocidade"><option value="kmh">Km/h</option><option value="ms">M/s</option></select></div><br>
-            <div class="groupo"><label for="velocidade">Converter para:</label><select id="velocidade"><option value="ms">M/s</option><option value="kmh">Km/h</option></select></div><br>
-            <br>
-            <div class="groupo"><label for="velocidade">Digite o valor: </label><input type="numero" id="input-velocidade" placeholder="Digite aqui"></div>
-            <br>
+            <div class="form-group">
+                <label for="velocidade-de">Converter de:</label>
+                <select id="velocidade-de">
+                    <option value="kmh">Km/h</option>
+                    <option value="ms">M/s</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="velocidade-para">Converter para:</label>
+                <select id="velocidade-para">
+                    <option value="ms">M/s</option>
+                    <option value="kmh">Km/h</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input-velocidade">Digite o valor:</label>
+                <input type="number" id="input-velocidade" placeholder="Digite aqui">
+            </div>
+
             <button onclick="calcular('velocidade')">Converter</button>
-            <div class="resultado" id="resultado-velocidade"></div>
+            <div class="result-area" id="resultado-velocidade"></div>
         </div>
 
         <div class="converter">
             <h2>Temperatura</h2>
-            <div class="medidas"><label for="temperatura">Converter de:</label><select id="temperatura"><option value="celsius">Celsius</option><option value="fahrenheit">Fahrenheit</option></select></div><br>
-            <div class="medidas"><label for="temperatura">Converter para:</label><select id="temperatura"><option value="fahrenheit">Fahrenheit</option><option value="celsius">Celsius</option></select></div><br>
-            <br>
-            <div class="medidas"><label for="temperatura">Digite o valor: </label><input type="numero" id="input-temperatura" placeholder="Digite aqui"></div>
-            <br>
+            <div class="form-group">
+                <label for="temperatura-de">Converter de:</label>
+                <select id="temperatura-de">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="temperatura-para">Converter para:</label>
+                <select id="temperatura-para">
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="celsius">Celsius</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input-temperatura">Digite o valor:</label>
+                <input type="number" id="input-temperatura" placeholder="Digite aqui">
+            </div>
+
             <button onclick="calcular('temperatura')">Converter</button>
-            <div class="resultado" id="resultado-temperatura"></div>
+            <div class="result-area" id="resultado-temperatura"></div>
         </div>
 
         <div class="converter">
             <h2>Comprimento</h2>
-            <div class="medidas"><label for="Comprimento">Converter para:</label><select id="Comprimento"><option value="metro">Metro</option><option value="quilometro">Quilômetro<option value="centimetro">Centímetro</option></select></div><br>
-            <div class="medidas"><label for="Comprimento">Converter para:</label><select id="Comprimento"><option value="centimetro">Centímetro</option><option value="quilometro">Quilometro<option value="metro">Metro</option></select></div><br>
-            <br>
-            <div class="medidas"><label for="Comprimento">Digite o valor: </label><input type="numero" id="input-temperatura" placeholder="Digite aqui"></div>
-            <br>
-            <button onclick="calcular('Comprimento')">Converter</button>
-            <div class="resultado" id="resultado-Comprimento"></div>
+            <div class="form-group">
+                <label for="comprimento-de">Converter de:</label>
+                <select id="comprimento-de">
+                    <option value="metro">Metro</option>
+                    <option value="quilometro">Quilômetro</option>
+                    <option value="centimetro">Centímetro</option>
+                    <option value="milimetro">Milímetro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comprimento-para">Converter para:</label>
+                <select id="comprimento-para">
+                    <option value="quilometro">Quilômetro</option>
+                    <option value="metro">Metro</option>
+                    <option value="centimetro">Centímetro</option>
+                    <option value="milimetro">Milímetro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input-comprimento">Digite o valor:</label>
+                <input type="number" id="input-comprimento" placeholder="Digite aqui">
+            </div>
+
+            <button onclick="calcular('comprimento')">Converter</button>
+            <div class="result-area" id="resultado-comprimento"></div>
         </div>
 
         <div class="converter">
             <h2>Massa</h2>
-            <div class="medidas"><label for="Massa">Converter para:</label><select id="massa"><option value="quilograma">Quilograma</option><option value="grama">Grama</option><option value="miligrama">Miligrama</option></select></div><br>
-            <div class="medidas"><label for="Massa">Converter para:</label><select id="massa"><option value="miligrama">Miligrama</option><option value="grama">Grama</option><option value="quilograma">Quilograma</option></select></div><br>
-            <br>
-            <div class="medidas"><label for="Massa">Digite o valor: </label><input type="numero" id="input-temperatura" placeholder="Digite aqui"></div>
-            <br>
-            <button onclick="calcular('Massa')">Converter</button>
-            <div class="resultado" id="resultado-massa"></div>
+            <div class="form-group">
+                <label for="massa-de">Converter de:</label>
+                <select id="massa-de">
+                    <option value="quilograma">Quilograma</option>
+                    <option value="grama">Grama</option>
+                    <option value="miligrama">Miligrama</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="massa-para">Converter para:</label>
+                <select id="massa-para">
+                    <option value="miligrama">Miligrama</option>
+                    <option value="grama">Grama</option>
+                    <option value="quilograma">Quilograma</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input-massa">Digite o valor:</label>
+                <input type="number" id="input-massa" placeholder="Digite aqui">
+            </div>
+
+            <button onclick="calcular('massa')">Converter</button>
+            <div class="result-area" id="resultado-massa"></div>
         </div>
 
-        <script src="script.js"></script>
+    </div>
 </body>
 </html>

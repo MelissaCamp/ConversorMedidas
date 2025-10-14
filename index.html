@@ -8,11 +8,38 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <h1>Conversor de Unidades</h1>
+    <header>
+      <section class="navegar">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="#navegar"><h1 class="logoNome">Convert<span>Pro</span></h1></a>
+          </div>
+          <div class="links">
+            <ul class="nav-links">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#conversores">Conversores</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+    </header>
 
+    <section id="inicio" class="comeco">
+      <div class="conteudo-inicio">
+        <h2>Converta Unidades Facilmente!</h2>
+        <p>Nosso site permite a conversão das seguintes unidades: tempo, velocidade, temperatura, comprimento e massa de forma rápida, simples e precisa.</p>
+        <a href="#conversores" class="btn">Comece Aqui e Agora!</a>
+      </div>
+    </section>
+
+    <section id="conversores" class="container">
+    <h2>Conversores de Unidades</h2>
+
+    <!-- <div class="container"> -->
       <div class="converter">
-        <h2>Tempo</h2>
+        <h3>Tempo</h3>
         <div class="form-group">
           <label for="tempo-de">Converter de:</label>
           <select id="tempo-de">
@@ -49,7 +76,7 @@
       </div>
 
       <div class="converter">
-        <h2>Velocidade</h2>
+        <h3>Velocidade</h3>
         <div class="form-group">
           <label for="velocidade-de">Converter de:</label>
           <select id="velocidade-de">
@@ -88,7 +115,7 @@
       </div>
 
       <div class="converter">
-        <h2>Temperatura</h2>
+        <h3>Temperatura</h3>
         <div class="form-group">
           <label for="temperatura-de">Converter de:</label>
           <select id="temperatura-de">
@@ -127,7 +154,7 @@
       </div>
 
       <div class="converter">
-        <h2>Comprimento</h2>
+        <h3>Comprimento</h3>
         <div class="form-group">
           <label for="comprimento-de">Converter de:</label>
           <select id="comprimento-de">
@@ -170,7 +197,7 @@
       </div>
 
       <div class="converter">
-        <h2>Massa</h2>
+        <h3>Massa</h3>
         <div class="form-group">
           <label for="massa-de">Converter de:</label>
           <select id="massa-de">
@@ -205,6 +232,30 @@
           />
         </div>
       </div>
-    </div>
+    <!-- </div> -->
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre o Projeto</h2>
+        <p>
+          Este projeto foi criado para ajudar estudantes, profissionais e curiosos a converter rapidamente diferentes unidades de medida.
+        Ele foi desenvolvido com HTML, CSS e JavaScript puro, com o objetivo de praticar e demonstrar lógica de programação e design web.
+        </p>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2>Contato</h2>
+        <p>Se você tiver alguma dúvida, sugestão ou feedback, nos envie uma mensagem!</p>
+        <p>Email: <a href="mailto:inex@emailinexistente.com" class="btn">inex@emailinexistente.com</a></p>
+    </section>
+
+    <footer>
+      <div class="social">
+        <p>Nossos GitHub: <a href="https://github.com/GabrielF09">GabrielF09</a> | <a href="https://github.com/EcccoPaes25">Gustavo Paes</a> | <a href="https://github.com/Jehcsm">Jéssica Matos
+        </a> | <a href="https://github.com/MelissaCamp">MelissaCamp</a></p>
+        <p>&copy; 2025 ConvertPro | Todos os direitos reservados.</p>
+      </div>
+    </footer>
   </body>
 </html>

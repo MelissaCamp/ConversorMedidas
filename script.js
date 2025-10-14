@@ -1,44 +1,49 @@
 function calcular(tipo) {
     let valor, de, para, resultado;
 
-    if (tipo === 'tempo') {
-        valor = parseFloat(document.getElementById('input-tempo').value);
-        de = document.getElementById('tempo-de').value;
-        para = document.getElementById('tempo-para').value;
-        resultado = converterTempo(valor, de, para);
-        document.getElementById('resultado-tempo').value = resultado;
+    switch(tipo) {
+        case 'tempo':
+            valor = parseFloat(document.getElementById('input-tempo').value);
+            de = document.getElementById('tempo-de').value;
+            para = document.getElementById('tempo-para').value;
+            resultado = converterTempo(valor, de, para);
+            document.getElementById('resultado-tempo').value = resultado;
+            return;
 
-    } 
-    else if (tipo === 'velocidade') {
-        valor = parseFloat(document.getElementById('input-velocidade').value);
-        de = document.getElementById('velocidade-de').value;
-        para = document.getElementById('velocidade-para').value;
-        resultado = converterVelocidade(valor, de, para);
-        document.getElementById('resultado-velocidade').value = resultado;
+        case 'velocidade':
+            valor = parseFloat(document.getElementById('input-velocidade').value);
+            de = document.getElementById('velocidade-de').value;
+            para = document.getElementById('velocidade-para').value;
+            resultado = converterVelocidade(valor, de, para);
+            document.getElementById('resultado-velocidade').value = resultado;
+            return;
 
-    } 
-    else if (tipo === 'temperatura') {
-        valor = parseFloat(document.getElementById('input-temperatura').value);
-        de = document.getElementById('temperatura-de').value;
-        para = document.getElementById('temperatura-para').value;
-        resultado = converterTemperatura(valor, de, para);
-        document.getElementById('resultado-temperatura').value = resultado;
+        case 'temperatura':
+            valor = parseFloat(document.getElementById('input-comprimento').value);
+            de = document.getElementById('comprimento-de').value;
+            para = document.getElementById('comprimento-para').value;
+            resultado = converterComprimento(valor, de, para);
+            document.getElementById('resultado-comprimento').value = resultado;
+            return;
 
-    } 
-    else if (tipo === 'comprimento') {
-        valor = parseFloat(document.getElementById('input-comprimento').value);
-        de = document.getElementById('comprimento-de').value;
-        para = document.getElementById('comprimento-para').value;
-        resultado = converterComprimento(valor, de, para);
-        document.getElementById('resultado-comprimento').value = resultado;
+        case 'comprimento':
+            valor = parseFloat(document.getElementById('input-comprimento').value);
+            de = document.getElementById('comprimento-de').value;
+            para = document.getElementById('comprimento-para').value;
+            resultado = converterComprimento(valor, de, para);
+            document.getElementById('resultado-comprimento').value = resultado;
+            return;
 
-    } 
-    else if (tipo === 'massa') {
-        valor = parseFloat(document.getElementById('input-massa').value);
-        de = document.getElementById('massa-de').value;
-        para = document.getElementById('massa-para').value;
-        resultado = converterMassa(valor, de, para);
-        document.getElementById('resultado-massa').value = resultado;
+        case 'massa':
+            valor = parseFloat(document.getElementById('input-massa').value);
+            de = document.getElementById('massa-de').value;
+            para = document.getElementById('massa-para').value;
+            resultado = converterMassa(valor, de, para);
+            document.getElementById('resultado-massa').value = resultado;
+            return;
+            
+        default:
+            alert("Erro.");
     }
 }
 
@@ -123,3 +128,4 @@ function converterMassa(v, de, para) {
 
     return resultado.toFixed(2) + ' ' + para;
 }
+

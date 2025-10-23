@@ -18,12 +18,12 @@ body {
   text-align: center;
 }
 .site h2 {
-  font-size: 3.4vh;
+  font-size: 2rem;
   color: var(--terciaria-color);
   margin: 25px 0;
 }
 .site p {
-  font-size: 2.2vh;
+  font-size: 1.5rem;
   color: var(--texto-color);
 }
 .container {
@@ -126,12 +126,14 @@ header {
   margin-bottom: 25px;
 }
 .lista {
-  text-align: justify;
+  justify-content:space-between;
+  align-items: center;
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   gap: 5vw;
   color: var(--texto-color);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: all .3s ease;
 }
 .lista a{
@@ -144,13 +146,16 @@ header {
 .lista li:hover{
   color: var(--terciaria-color);
 }
+.lista li{
+  margin: 5px 0;
+}
 .btn1 {
   display: block;
   margin: 0 auto;
   text-align: center;
   max-width: 20em;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 12px 0;
@@ -162,7 +167,7 @@ header {
 }
 .btn1:hover {
   background-color: var(--texto-color);
-  font-size: 1.17rem;
+  font-size: 1.30rem;
 }
 
 /* #endregion*/

@@ -182,8 +182,8 @@ header {
   background-color: var(--primeiroFundo-color);
   border-radius: 8px;
   padding: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   margin-bottom: 45px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   border: solid 2px var(--terciaria-color);
   transition: all .3s ease;
 }
@@ -191,6 +191,10 @@ header {
   transform: scale(1.03); /*Faz um efeito de zoom*/
 }
 
+.converter:last-of-type{
+  margin-bottom: 1px;
+
+}
 .converter h3 {
   margin-top: 0;
   margin-bottom: 20px;

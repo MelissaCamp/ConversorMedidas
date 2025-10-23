@@ -1,6 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
-  background-color: var(--primeiroFundo-color)  ;
+  background-color: var(--primeiroFundo-color);
   color: #333;
   padding: 0 12vw;
   margin: 0;
@@ -10,31 +10,35 @@ body {
   --segundoFundo-color: #f3eeeb;
   --terciaria-color: #96b5ad;
   --texto-color: #281916;
-  --btn-color:#007bffff;
+  --btn-color: #007bffff;
 }
-.site{
-  background-color:var(--segundoFundo-color);
-  /* padding: 0 5rem; */
+.site {
+  background-color: var(--segundoFundo-color);
   margin: 0;
   text-align: center;
 }
-.site h2{
+.site h2 {
+  font-size: 3.4vh;
   color: var(--terciaria-color);
+  margin: 25px 0;
 }
-.site p{
-  font-size: 2vh;
+.site p {
+  font-size: 2.2vh;
   color: var(--texto-color);
 }
 .container {
   width: 100%;
-  max-width: 500px;
   margin: 0 auto; /* Centraliza o container principal */
-  padding: 20px;
+  padding: 0 auto;
+}
+.conteudo {
+  margin: 0 5vh;
 }
 
 /* #region Header/navbar */
 header {
   width: 100%;
+  border-bottom: dashed 3.5px var(--terciaria-color);
 }
 
 .navbar {
@@ -44,24 +48,24 @@ header {
   margin-left: 5%;
   margin-right: 5%;
 }
-.navegar a{
+.navegar a {
   text-decoration: none;
   list-style: none;
   color: var(--terciaria-color);
 }
-.logo{
+.logo {
   text-align: center;
   flex: 1;
   display: flex;
   justify-content: center;
 }
-.logoNome{
+.logoNome {
   font-weight: 800;
 }
-.links{
-  flex: 2;
+.links {
+  flex: 3;
   overflow-x: auto;
-  background:#c9e4dda8;
+  background: #c9e4dda8;
   border: 1.9px solid var(--terciaria-color);
   border-radius: 12px;
   padding: 10px;
@@ -113,23 +117,87 @@ header {
 /* #endregion*/
 
 /* #region comeco*/
+.comeco {
+  display: flex;
+  justify-content: center;
+}
+.comeco p {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.lista {
+  text-align: justify;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+  color: var(--texto-color);
+  font-size: 1.2rem;
+  transition: all .3s ease;
+}
+.lista a{
+  text-decoration: none;
+  color: var(--texto-color);
+}
+.lista a:hover{
+  color: var(--terciaria-color);
+}
+.lista li:hover{
+  color: var(--terciaria-color);
+}
+.btn1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 20em;
+  font-weight: 600;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 12px 0;
+  background-color: var(--terciaria-color);
+  color: #ffffff;
+  border-radius: 6px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+.btn1:hover {
+  background-color: var(--texto-color);
+  font-size: 1.17rem;
+}
+
 /* #endregion*/
 
 /* #region Conversores*/
+.containeres{
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+.container h2{
+  padding-bottom: 15px;
+}
 .converter {
-  background-color: #ffffff;
+  width: 370px;
+  background-color: var(--primeiroFundo-color);
   border-radius: 8px;
   padding: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  margin-bottom: 30px;
+  margin-bottom: 45px;
+  border: solid 2px var(--terciaria-color);
+  transition: all .3s ease;
+}
+.converter:hover{
+  transform: scale(1.03); /*Faz um efeito de zoom*/
 }
 
 .converter h3 {
   margin-top: 0;
   margin-bottom: 20px;
+  font-size: 1.45rem;
   text-align: center;
-  color: #34495e;
-  border-bottom: 1px solid #eee;
+  color: var(--texto-color);
+  border-bottom: 1px solid var(--primeiroFundo-color);
   padding-bottom: 15px;
   letter-spacing: 1px;
 }
@@ -156,43 +224,73 @@ select {
 }
 
 button {
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   width: 100%;
   padding: 12px;
-  background-color: #007bff;
+  background-color: var(--texto-color);
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--terciaria-color);
 }
 
 .result-area input {
-    width: 100%;
+  width: 100%;
   padding: 10px;
   border: 1px solid #dcdfe6;
   border-radius: 6px;
   font-size: 16px;
   box-sizing: border-box;
 }
-.result-area label{
-    margin-top: 15px;
-    display: block;
+.result-area label {
+  margin-top: 15px;
+  display: block;
   margin-bottom: 5px;
   font-weight: 500;
   color: #555;
 }
 /* #endregion*/
 
-
-footer {
-    text-align: center;
-    padding: 10px;
+/* #region Sobre*/
+.sobre{
+  margin: 0 5vw;
 }
+/* #endregion*/
+
+/* #region Contato*/
+.contato{
+  text-align: center;
+}
+.contato p:last-of-type{
+  padding-bottom: 12px;
+}
+.btn2{
+  color: var(--texto-color);
+  text-decoration: none;
+}
+/* #endregion*/
+
+/* #region Footer*/
+footer {
+  padding: 12px 0;
+  border-top: dashed 3.5px var(--terciaria-color);
+}
+.social{
+  margin: 0 10vw;
+}
+.social a{
+  color: var(--texto-color);
+  text-decoration: none;
+  transition: all .3s ease;
+}
+.social a:hover{
+  color: var(--terciaria-color);
+}
+/* #endregion*/
